@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+
 import {
   Box,
   CloseButton,
@@ -25,6 +28,15 @@ const LinkItems = [
 ];
 
 export default function Sidebar({ onClose, ...rest }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.events.on("routeChangeComplete", onClose);
+    return () => {
+      router.events.off("routeChangeComplete", onClose);
+    };
+  }, [router.events, onClose]);
+
   return (
     <Box
       transition="3s ease"
