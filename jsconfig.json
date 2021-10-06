@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@root/*": ["/*"],
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@sections/*": ["sections/*"],
+      "@layout/*": ["layout/*"],
+      "@public/*": ["public/*"],
+      "@lib/*": ["lib/*"]
+    }
+  }
+}
