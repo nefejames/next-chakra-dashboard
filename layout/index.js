@@ -25,7 +25,7 @@ export default function Layout({ children }) {
         </DrawerContent>
       </Drawer>
 
-      {/* Header */}
+      {/*= Header =*/}
       <Header onOpen={onOpen} />
       <Box ml={{ base: 0, md: 60 }} p="4">
         {children}
