@@ -13,7 +13,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-export default function ModalProduct({ isOpen, onClose, modalData }) {
+export default function ProductModal({ isOpen, onClose, modalData }) {
   const { title, price, img } = modalData || {};
   const toast = useToast();
 

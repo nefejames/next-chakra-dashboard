@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { cardVariant, parentVariant } from "@root/motion";
-import CardModal from "@components/CardModal";
+import ProductModal from "@components/ProductModal ";
 import { motion } from "framer-motion";
 import data from "@root/data";
-import Card from "@components/Card";
+import ProductCard from "@components/ProductCard";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 
 const MotionSimpleGrid = motion(SimpleGrid);
@@ -24,11 +24,11 @@ export default function Home() {
       >
         {data.map((product, i) => (
           <MotionBox variants={cardVariant} key={i}>
-            <Card product={product} setModalData={setModalData} />
+            <ProductCard product={product} setModalData={setModalData} />
           </MotionBox>
         ))}
       </MotionSimpleGrid>
-      <CardModal
+      <ProductModal
         isOpen={modalData ? true : false}
         onClose={() => setModalData(null)}
         modalData={modalData}

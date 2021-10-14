@@ -1,13 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import {
-  Box,
-  CloseButton,
-  Flex,
-  useColorModeValue,
-  Text,
-} from "@chakra-ui/react";
+import { Box, CloseButton, Flex, Text } from "@chakra-ui/react";
 
 import {
   FiHome,
@@ -40,9 +34,9 @@ export default function Sidebar({ onClose, ...rest }) {
   return (
     <Box
       transition="3s ease"
-      bg={useColorModeValue("white", "gray.900")}
+      bg="white"
       borderRight="1px"
-      borderRightColor={useColorModeValue("gray.200", "gray.700")}
+      borderRightColor="gray.200"
       w={{ base: "full", md: 60 }}
       pos="fixed"
       h="full"
@@ -54,8 +48,8 @@ export default function Sidebar({ onClose, ...rest }) {
         </Text>
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
-      {LinkItems.map((link) => (
-        <NavLink key={link.name} link={link} />
+      {LinkItems.map((link, i) => (
+        <NavLink key={i} link={link} />
       ))}
     </Box>
   );
