@@ -5,7 +5,7 @@ import { AiTwotoneStar } from "react-icons/ai";
 const ChakraStar = chakra(AiTwotoneStar);
 
 export default function ProductCard({ product, setModalData }) {
-  const { img, title, price } = product;
+  const { img, title, price, details } = product;
   const score = Math.floor(Math.random(5) * 5);
   const reviewCount = Math.floor(Math.random(50) * 50);
 
@@ -33,17 +33,18 @@ export default function ProductCard({ product, setModalData }) {
           <Image
             src={img}
             objectFit="cover"
-            alt="picture of a house"
+            alt="ProductNameHumo"
             layout="fill"
           />
         </Box>
 
         <Box p="6">
-          <Box fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
+          <Box  textColor={"goldenrod"} fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
             {title}
           </Box>
 
-          <Box>${price}</Box>
+          <Box></Box>
+          <Box textColor={"goldenrod"} fontWeight="semibold" as="h4" lineHeight="tight" isTruncate>${details}</Box>
 
           <Box d="flex" mt="3" alignItems="center">
             {Array(5)
@@ -51,10 +52,10 @@ export default function ProductCard({ product, setModalData }) {
               .map((_, i) => (
                 <ChakraStar
                   key={i}
-                  color={i < score ? "teal.500" : "gray.300"}
+                  color={i < score ? "teal.500" : "greenyellow"}
                 />
               ))}
-            <Box as="span" ml="2" color="gray.600" fontSize="sm">
+            <Box as="span" ml="2" color="yellow.600" fontSize="sm">
               {reviewCount} reviews
             </Box>
           </Box>

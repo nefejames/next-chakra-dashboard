@@ -9,13 +9,14 @@ export default function NavLink({ link, ...rest }) {
       <a>
         <Flex
           align="center"
-          p="4"
-          mx="4"
+          p="2"
+          
+          mt={5}
           borderRadius="lg"
           role="group"
-          cursor="pointer"
+          cursor="alias"
           _hover={{
-            bg: "cyan.400",
+            bg: "goldenrod",
             color: "white",
           }}
           {...rest}
@@ -25,7 +26,7 @@ export default function NavLink({ link, ...rest }) {
               mr="4"
               fontSize="16"
               _groupHover={{
-                color: "white",
+                color: "goldenrod",
               }}
               as={icon}
             />
