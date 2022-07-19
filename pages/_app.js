@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Chakra UI Dashboard</title>
+        <title>Humo Health Care</title>
       </Head>
 
       <ChakraProvider>

@@ -1,4 +1,4 @@
-import { IconButton, Flex, Text } from "@chakra-ui/react";
+import { IconButton, Flex, Text, Box, HStack, Link } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 import UserProfile from "./UserProfile";
 
@@ -18,6 +18,14 @@ export default function Header({ onOpen, ...rest }) {
       justifyContent={{ base: "space-between", md: "flex-end" }}
       {...rest}
     >
+      <Box>
+        <HStack>
+        <Link href="/"><Text>Radiation Oncology</Text></Link>
+        <Link href="/Distributers"><Text>Where to Buy </Text></Link>
+        <Link href="/"><Text>About Humo Health Care  </Text></Link>
+        <Link href="/"><Text>Contact</Text></Link>
+        </HStack>
+      </Box>
       <IconButton
         display={{ base: "flex", md: "none" }}
         onClick={onOpen}
@@ -32,7 +40,7 @@ export default function Header({ onOpen, ...rest }) {
         fontFamily="monospace"
         fontWeight="bold"
       >
-        Logo
+        Humo Health Care
       </Text>
 
       <UserProfile />

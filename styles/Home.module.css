@@ -1,0 +1,26 @@
+
+ 
+
+ 
+  .cards{
+    padding-bottom: 20px;
+  }
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  
+  .video-responsive iframe {
+    
+    left: 0;
+    top: 0;
+    padding:4px;
+    height: 100%;
+    width: 100%;
+    position: flex-direaction;
+  }
+  
+  

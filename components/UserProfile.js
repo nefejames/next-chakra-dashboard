@@ -43,8 +43,8 @@ export default function UserProfile() {
                 spacing="1px"
                 ml="2"
               >
-                <Text fontSize="lg">Ademola Jones</Text>
-                <Text fontSize="md" color="gray.600">
+                <Text  textColor={'goldenrod'} fontSize="lg">Ademola Jones</Text>
+                <Text textColor={'goldenrod'} fontSize="md" color="gray.600">
                   Admin
                 </Text>
               </VStack>

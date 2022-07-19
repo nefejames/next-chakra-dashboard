@@ -14,13 +14,13 @@ import {
 } from "@chakra-ui/react";
 
 export default function ProductModal({ isOpen, onClose, modalData }) {
-  const { title, price, img } = modalData || {};
+  const { title, price, img, details } = modalData || {};
   const toast = useToast();
 
   const handleModalClose = () => {
     toast({
-      title: "Purchase successsful.",
-      description: "Fashion ++",
+      title: "Product Added to the cart.",
+      description: "Cart",
       status: "success",
       duration: 3000,
       isClosable: true,
@@ -49,10 +49,23 @@ export default function ProductModal({ isOpen, onClose, modalData }) {
                 as="h4"
                 lineHeight="tight"
                 isTruncated
+                textColor={"goldenrod"}
               >
                 {title}
               </Box>
-              ${price}
+              <Box
+                mt="3"
+                justifyItems={"center"}
+                fontWeight="semibold"
+                fontFamily={"heading"}
+                as="h4"
+                textColor={"GrayText"}
+                lineHeight="tight"
+                isTruncated
+              >
+                {details}
+              </Box>
+             
             </Box>
           </Box>
         </ModalBody>

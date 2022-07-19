@@ -1,0 +1,19 @@
+nav{
+
+    
+}
+
+.menu-bar{
+    border: 1px solid black;
+    height: -webkit-fit-content;
+    height:-moz-fit-content;
+    height:fit-content;
+    display:center;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    padding:20px;
+    margin:18px;
+}
+
